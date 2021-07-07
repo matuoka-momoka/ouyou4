@@ -6,6 +6,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book_comment = BookComment.new
     @user = @book.user
+    #@search = Books.search(params[:search])
   end
 
   def index
@@ -39,6 +40,7 @@ class BooksController < ApplicationController
     @book.destroy
     redirect_to books_path
   end
+
 
   private
 
